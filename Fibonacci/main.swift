@@ -6,14 +6,16 @@
 //
 
 import Foundation
-import BlockRunTime
 
-let loopCount = 1000
-let shiftMax = 5
+let loopCount = 10
+let shiftMax = 6
 
+_ = timeImplementation(3, count: 1, imp: .recursive)
 for i in 0...shiftMax {
-    let n = 2 >> i
-    for imp: Implementation in [ .array, .binet, .iterative, .recursive, .recursive10] {
-        _ = timeImplementation(n, count: loopCount, imp: imp)
+    let n = 1 << i
+    for imp in Implementation.allCases {
+        let runTime =
+            String(format: "%.1f", timeImplementation(n, count: loopCount, imp: imp))
+        print("\(imp.name())(\(n)) took \(runTime) ns.")
     }
 }
