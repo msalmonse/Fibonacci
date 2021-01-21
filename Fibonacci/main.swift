@@ -8,9 +8,12 @@
 import Foundation
 import BlockRunTime
 
-let n = 40
-print("Recursive fib(\(n)): \(fRecursive(n))")
-print("Loop unrolled fib(\(n)): \(fRecursive10(n))")
-print("Iterative fib(\(n)): \(fIterative(n))")
-print("Binet fib(\(n)): \(fBinet(n))")
-print("Array fib(\(n)): \(fArray(n))")
+let loopCount = 1000
+let shiftMax = 5
+
+for i in 0...shiftMax {
+    let n = 2 >> i
+    for imp: Implementation in [ .array, .binet, .iterative, .recursive, .recursive10] {
+        _ = timeImplementation(n, count: loopCount, imp: imp)
+    }
+}
