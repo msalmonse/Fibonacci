@@ -17,8 +17,18 @@ func blockRunTime<T>(count: Int = 1, _ block: () -> T) -> Double {
     return dur
 }
 
-enum Implementation {
+enum Implementation: CaseIterable {
     case array, binet, iterative, recursive, recursive10
+    
+    func name() -> String {
+        switch self {
+        case .array: return "Array"
+        case .binet: return "Binet"
+        case .iterative: return "Iterative"
+        case .recursive: return "Recursive"
+        case .recursive10: return "Recursive10"
+        }
+    }
 }
 
 func timeImplementation(_ n: Int, count: Int, imp: Implementation) -> Double {
