@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C40287FD259E0EAA005DB79F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40287FC259E0EAA005DB79F /* main.swift */; };
-		C4028806259E1046005DB79F /* BlockRunTime in Frameworks */ = {isa = PBXBuildFile; productRef = C4028805259E1046005DB79F /* BlockRunTime */; };
 		C4028809259E1096005DB79F /* Recursive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028808259E1096005DB79F /* Recursive.swift */; };
 		C402880C259F7164005DB79F /* Iterative.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402880B259F7163005DB79F /* Iterative.swift */; };
 		C402880F259F73BA005DB79F /* Binet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402880E259F73BA005DB79F /* Binet.swift */; };
 		C4028812259F7623005DB79F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028811259F7623005DB79F /* Array.swift */; };
+		C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402881425A0A0D9005DB79F /* TimeImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +34,7 @@
 		C402880B259F7163005DB79F /* Iterative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterative.swift; sourceTree = "<group>"; };
 		C402880E259F73BA005DB79F /* Binet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binet.swift; sourceTree = "<group>"; };
 		C4028811259F7623005DB79F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		C402881425A0A0D9005DB79F /* TimeImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4028806259E1046005DB79F /* BlockRunTime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C40287FC259E0EAA005DB79F /* main.swift */,
+				C402881425A0A0D9005DB79F /* TimeImplementation.swift */,
 				C4028811259F7623005DB79F /* Array.swift */,
 				C4028808259E1096005DB79F /* Recursive.swift */,
 				C402880B259F7163005DB79F /* Iterative.swift */,
@@ -93,7 +94,6 @@
 			);
 			name = Fibonacci;
 			packageProductDependencies = (
-				C4028805259E1046005DB79F /* BlockRunTime */,
 			);
 			productName = Fibonacci;
 			productReference = C40287F9259E0EAA005DB79F /* Fibonacci */;
@@ -123,7 +123,6 @@
 			);
 			mainGroup = C40287F0259E0EAA005DB79F;
 			packageReferences = (
-				C4028804259E1046005DB79F /* XCRemoteSwiftPackageReference "BlockRunTime" */,
 			);
 			productRefGroup = C40287FA259E0EAA005DB79F /* Products */;
 			projectDirPath = "";
@@ -143,6 +142,7 @@
 				C4028812259F7623005DB79F /* Array.swift in Sources */,
 				C402880C259F7164005DB79F /* Iterative.swift in Sources */,
 				C4028809259E1096005DB79F /* Recursive.swift in Sources */,
+				C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */,
 				C40287FD259E0EAA005DB79F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,25 +305,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C4028804259E1046005DB79F /* XCRemoteSwiftPackageReference "BlockRunTime" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/msalmonse/BlockRunTime.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C4028805259E1046005DB79F /* BlockRunTime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C4028804259E1046005DB79F /* XCRemoteSwiftPackageReference "BlockRunTime" */;
-			productName = BlockRunTime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C40287F1259E0EAA005DB79F /* Project object */;
 }
