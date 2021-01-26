@@ -7,11 +7,12 @@
 
 import Foundation
 
-let root5 = sqrt(5.0)
-let phi = (1.0 + root5)/2.0
+let log2root5 = log2(5.0)/2.0
+let log2phi = log2(1.0 + sqrt(5.0)) - 1.0
 
 func fBinet(_ n: Int) -> Int {
     guard n > 0 else { return 0 }
 
-    return Int(round(pow(phi, Double(n))/root5))
+    // pow(phi, n) == exp2(log2(phi) * n
+    return Int(round(exp2(log2phi * Double(n) - log2root5)))
 }
