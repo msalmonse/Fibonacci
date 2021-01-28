@@ -13,6 +13,7 @@
 		C402880F259F73BA005DB79F /* Binet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402880E259F73BA005DB79F /* Binet.swift */; };
 		C4028812259F7623005DB79F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028811259F7623005DB79F /* Array.swift */; };
 		C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402881425A0A0D9005DB79F /* TimeImplementation.swift */; };
+		C467A14525C2E1A1002AF70F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C467A14425C2E1A1002AF70F /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		C402880E259F73BA005DB79F /* Binet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binet.swift; sourceTree = "<group>"; };
 		C4028811259F7623005DB79F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		C402881425A0A0D9005DB79F /* TimeImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeImplementation.swift; sourceTree = "<group>"; };
+		C467A14425C2E1A1002AF70F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				C40287FC259E0EAA005DB79F /* main.swift */,
+				C467A14425C2E1A1002AF70F /* Test.swift */,
 				C402881425A0A0D9005DB79F /* TimeImplementation.swift */,
 				C4028811259F7623005DB79F /* Array.swift */,
 				C4028808259E1096005DB79F /* Recursive.swift */,
@@ -141,6 +144,7 @@
 				C402880F259F73BA005DB79F /* Binet.swift in Sources */,
 				C4028812259F7623005DB79F /* Array.swift in Sources */,
 				C402880C259F7164005DB79F /* Iterative.swift in Sources */,
+				C467A14525C2E1A1002AF70F /* Test.swift in Sources */,
 				C4028809259E1096005DB79F /* Recursive.swift in Sources */,
 				C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */,
 				C40287FD259E0EAA005DB79F /* main.swift in Sources */,
