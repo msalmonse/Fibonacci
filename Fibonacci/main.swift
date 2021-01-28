@@ -13,8 +13,12 @@ let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 78, 92 ]
 // compare implementations
 for n in nList {
     let impList = Implementation.allCases.shuffled().filter { $0.checkMax(n) }
-    for i in stride(from: 0, through: impList.count - 2, by: 2) {
-        _ = test(impList[1], impList[i + 1], n)
+    let res1 = runImplementation(n, imp: impList[0])
+    for i in 1..<impList.count {
+        let res2 = runImplementation(n, imp: impList[i])
+        if res1 != res2 {
+            print("\(impList[0].name())(\(n))(\(res1)) != \(impList[i].name())(\(n))(\(res2))")
+        }
     }
 }
 
