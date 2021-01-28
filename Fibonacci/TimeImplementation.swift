@@ -20,6 +20,13 @@ func blockRunTime<T>(count: Int = 1, _ block: () -> T) -> Double {
 enum Implementation: CaseIterable {
     case array, binet, iterative, recursive, recursive2, recursive10
     
+    func checkMax(_ n: Int) -> Bool {
+        switch self {
+        case .recursive: return n < 40
+        default: return true
+        }
+    }
+    
     func name() -> String {
         switch self {
         case .array: return "Array"
@@ -32,7 +39,7 @@ enum Implementation: CaseIterable {
     }
 }
 
-func runImplementation(_ n: Int, count: Int, imp: Implementation) -> Int {
+func runImplementation(_ n: Int, imp: Implementation) -> Int {
     switch imp {
     case .array: return fArray(n)
     case .binet: return fBinet(n)
