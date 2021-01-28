@@ -32,7 +32,7 @@ func fRecursive2(_ n: Int) -> Int {
     default:
         // use fib(i+j) == fib(i+1)*fib(j) + fib(i)*fib(j-1)
         let i = n >> 1
-        let j = n - (i << 1)
+        let j = n - i
         return fRecursive2(i + 1) * fRecursive2(j) + fRecursive2(i) * fRecursive2(j - 1)
     }
 }
