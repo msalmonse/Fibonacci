@@ -7,7 +7,7 @@
 
 import Foundation
 
-private let fibsMax = 90
+private let fibsMax = 92
 private let fibs = Array(0...fibsMax).map{fIterative($0)}
 
 func fArray(_ n: Int) -> Int {
