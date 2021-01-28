@@ -22,6 +22,7 @@ enum Implementation: CaseIterable {
     
     func checkMax(_ n: Int) -> Bool {
         switch self {
+        case .binet: return n < 72
         case .recursive: return n < 40
         default: return true
         }
