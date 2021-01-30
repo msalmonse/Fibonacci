@@ -9,7 +9,7 @@ import Foundation
 
 func fRecursive(_ n: Int) -> Int {
     guard n > 0 else { return 0 }
-    
+
     if n > 40 { print(n) }
 
     if n > 2 { return fRecursive(n - 1) + fRecursive(n - 2) }
@@ -33,7 +33,16 @@ func fRecursive2(_ n: Int) -> Int {
         // use fib(i+j) == fib(i+1)*fib(j) + fib(i)*fib(j-1)
         let i = n >> 1
         let j = n - i
-        return fRecursive2(i + 1) * fRecursive2(j) + fRecursive2(i) * fRecursive2(j - 1)
+        if i == j {
+            let k = fRecursive2(i)
+            // fib(i + 1) == fib(i) + fib(i - 1)
+            return k * (k + fRecursive2(i - 1) + fRecursive2(j - 1))
+        } else {
+            // i == j - 1 and j == i + 1
+            let k = fRecursive2(i)
+            let l = fRecursive2(j)
+            return k * k + l * l
+        }
     }
 }
 
