@@ -7,8 +7,8 @@
 
 import Foundation
 
-let loopCount = 1000
-let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 78, 92 ]
+let loopCount = 1000000
+let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 77, 92 ]
 
 var comparedOK = true
 
@@ -28,10 +28,11 @@ for n in 1...92 {
 if !comparedOK { exit(1) }
 
 for imp in Implementation.allCases {
+    let runCount = loopCount/imp.countDivisor()
     for n in nList {
         if imp.checkMax(n) {
             let runTime = String(format: "%.1f",
-                timeImplementation(n, count: loopCount, imp: imp)/Double(loopCount)
+                timeImplementation(n, count: runCount, imp: imp)/Double(runCount)
             )
             print("\(imp.name())(\(n)) took \(runTime) ns.")
         }
