@@ -27,14 +27,23 @@ for n in 1...92 {
 
 if !comparedOK { exit(1) }
 
-for imp in Implementation.allCases {
-    let runCount = loopCount/imp.countDivisor()
-    for n in nList {
-        if imp.checkMax(n) {
+print("\"n\"", terminator: "")
+_ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
+print()
+
+for n in nList {
+    print("\(n)", terminator: "")
+    for imp in Implementation.allCases {
+        let runCount = loopCount/imp.countDivisor()
+
+        if !imp.checkMax(n) {
+            print(",", terminator: "")
+        } else {
             let runTime = String(format: "%.1f",
                 timeImplementation(n, count: runCount, imp: imp)/Double(runCount)
             )
-            print("\(imp.name())(\(n)) took \(runTime) ns.")
+            print(",\(runTime)", terminator: "")
         }
     }
+    print()
 }
