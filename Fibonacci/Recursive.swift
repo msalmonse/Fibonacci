@@ -7,16 +7,14 @@
 
 import Foundation
 
-func fRecursive(_ n: Int) -> Int {
+func fRecursive(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
-
-    if n > 40 { print(n) }
 
     if n > 2 { return fRecursive(n - 1) + fRecursive(n - 2) }
     return 1
 }
 
-func fRecursive2(_ n: Int) -> Int {
+func fRecursive2(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     switch n {
@@ -46,7 +44,7 @@ func fRecursive2(_ n: Int) -> Int {
     }
 }
 
-func fRecursive10(_ n: Int) -> Int {
+func fRecursive10(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     switch n {

@@ -8,7 +8,7 @@
 import Foundation
 
 let loopCount = 1000000
-let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 77, 92 ]
+let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 77, 92, 127, 160 ]
 
 var comparedOK = true
 

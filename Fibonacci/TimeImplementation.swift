@@ -22,9 +22,11 @@ enum Implementation: CaseIterable {
 
     func checkMax(_ n: Int) -> Bool {
         switch self {
-        case .binet: return n < 72
-        case .binet2: return n < 71
-        case .recursive: return n < 40
+        case .array: return n <= 92
+        case .binet: return n < 35
+        case .binet2: return n < 35
+        case .recursive: return n < 20
+        case .recursive10: return n < 65
         default: return true
         }
     }
@@ -52,7 +54,7 @@ enum Implementation: CaseIterable {
     }
 }
 
-func runImplementation(_ n: Int, imp: Implementation) -> Int {
+func runImplementation(_ n: Int, imp: Implementation) -> Decimal {
     switch imp {
     case .array: return fArray(n)
     case .binet: return fBinet(n)
