@@ -23,5 +23,5 @@ func fBinet2(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     // pow(phi, n) == exp2(log2(phi)) * n
-    return Decimal(round(pow(phi, Double(n))/root5))
+    return round(pow(Decimal(phi), n)/Decimal(root5))
 }
