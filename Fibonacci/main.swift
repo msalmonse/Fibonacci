@@ -8,7 +8,6 @@
 import Foundation
 
 let loopCount = 1000000
-let nList = [ 1, 2, 3, 6, 9, 14, 21, 32, 48, 64, 77, 92, 127, 160 ]
 
 var comparedOK = true
 
@@ -31,7 +30,7 @@ print("\"n\"", terminator: "")
 _ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
 print()
 
-for n in nList {
+for n in 1...160 {
     print("\(n)", terminator: "")
     for imp in Implementation.allCases {
         let runCount = loopCount/imp.countDivisor()
