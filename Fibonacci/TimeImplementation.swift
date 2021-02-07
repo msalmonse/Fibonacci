@@ -23,7 +23,7 @@ enum Implementation: CaseIterable {
     func checkMax(_ n: Int) -> Bool {
         switch self {
         case .array: return n <= 92
-        case .binet: return n < 35
+        case .binet: return n < 33
         case .binet2: return n < 67
         case .recursive: return n < 20
         case .recursive10: return n < 65
@@ -33,6 +33,8 @@ enum Implementation: CaseIterable {
 
     func countDivisor() -> Int {
         switch self {
+        case .binet: return 1000
+        case .binet2: return 1000
         case .iterative: return 1000
         case .recursive: return 10000
         case .recursive2: return 100
