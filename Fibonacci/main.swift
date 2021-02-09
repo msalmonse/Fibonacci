@@ -8,11 +8,12 @@
 import Foundation
 
 let loopCount = 1000000
+let nMax = 175
 
 var comparedOK = true
 
 // compare implementations
-for n in 1...92 {
+for n in 1...nMax {
     let impList = Implementation.allCases.filter { $0.checkMax(n) }
     let res1 = runImplementation(n, imp: impList[0])
     for i in 1..<impList.count {
@@ -30,7 +31,7 @@ print("\"n\"", terminator: "")
 _ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
 print()
 
-for n in 1...160 {
+for n in 1...nMax {
     print("\(n)", terminator: "")
     for imp in Implementation.allCases {
         let runCount = loopCount/imp.countDivisor()
