@@ -32,9 +32,10 @@ func fRecursive2(_ n: Int) -> Decimal {
         let i = n >> 1
         let j = n - i
         if i == j {
-            let k = fRecursive2(i)
+            let k = fRecursive2(i)      // also fib(j)
+            let l = fRecursive2(i - 1)  // also fib(j-1)
             // fib(i + 1) == fib(i) + fib(i - 1)
-            return k * (k + fRecursive2(i - 1) + fRecursive2(j - 1))
+            return (k + l) * k + k * l
         } else {
             // i == j - 1 and j == i + 1
             let k = fRecursive2(i)
