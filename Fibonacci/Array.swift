@@ -7,12 +7,11 @@
 
 import Foundation
 
-private let fibsMax = 92
-private let fibs = Array(0...fibsMax).map { fIterative($0) }
+private let fibs = Array(0...nMax).map { fIterative($0) }
 
 func fArray(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
-    guard n <= fibsMax else { return -1 }
+    guard n <= nMax else { return -1 }
 
     return fibs[n]
 }
