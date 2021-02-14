@@ -14,6 +14,7 @@
 		C4028812259F7623005DB79F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028811259F7623005DB79F /* Array.swift */; };
 		C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402881425A0A0D9005DB79F /* TimeImplementation.swift */; };
 		C408E93425CECF570011278E /* DecimalMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408E93325CECF570011278E /* DecimalMath.swift */; };
+		C4EAA6A225D9239700196D5D /* Hybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAA6A125D9239700196D5D /* Hybrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		C4028811259F7623005DB79F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		C402881425A0A0D9005DB79F /* TimeImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeImplementation.swift; sourceTree = "<group>"; };
 		C408E93325CECF570011278E /* DecimalMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalMath.swift; sourceTree = "<group>"; };
+		C4EAA6A125D9239700196D5D /* Hybrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hybrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				C4028811259F7623005DB79F /* Array.swift */,
 				C402880E259F73BA005DB79F /* Binet.swift */,
 				C408E93325CECF570011278E /* DecimalMath.swift */,
+				C4EAA6A125D9239700196D5D /* Hybrid.swift */,
 				C402880B259F7163005DB79F /* Iterative.swift */,
 				C40287FC259E0EAA005DB79F /* main.swift */,
 				C4028808259E1096005DB79F /* Recursive.swift */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C408E93425CECF570011278E /* DecimalMath.swift in Sources */,
+				C4EAA6A225D9239700196D5D /* Hybrid.swift in Sources */,
 				C402880F259F73BA005DB79F /* Binet.swift in Sources */,
 				C4028812259F7623005DB79F /* Array.swift in Sources */,
 				C402880C259F7164005DB79F /* Iterative.swift in Sources */,
