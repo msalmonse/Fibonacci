@@ -1,0 +1,8 @@
+.DS_store
+
+## User settings
+Fibonacci.xcodeproj/project.xcworkspace/
+Fibonacci.xcodeproj/xcuserdata/
+Fibonacci.xcodeproj/xcshareddata/
+## app icons
+iconGen*/
