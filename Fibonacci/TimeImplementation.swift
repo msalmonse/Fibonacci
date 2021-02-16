@@ -24,7 +24,7 @@ enum Implementation: CaseIterable {
         switch self {
         case .array: return n <= nMax
         case .binet: return n < 70
-        case .binet2: return n < 71
+        case .binet2: return n < 70
         case .recursive: return n < 20
         case .recursive2: return n < 190
         case .recursive10: return n < 65
