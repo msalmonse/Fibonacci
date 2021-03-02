@@ -1,0 +1,13 @@
+{
+    "colours": [ "black", "violet" ],
+    "headerRows": 1,
+    "height": 600,
+    "index": 1,
+    "title": "Fibonacci Implementation timings",
+    "xTick": 25,
+    "xTitle": "Fibonacci Number",
+    "yMax": 8000,
+    "yTick": 1000,
+    "yTitle": "Time (nS)",
+    "width": 800
+}
