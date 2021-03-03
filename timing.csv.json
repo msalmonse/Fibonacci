@@ -3,6 +3,7 @@
     "headerRows": 1,
     "height": 600,
     "index": 1,
+    "strokeWidth": 3,
     "title": "Fibonacci Implementation timings",
     "xTick": 25,
     "xTitle": "Fibonacci Number",
