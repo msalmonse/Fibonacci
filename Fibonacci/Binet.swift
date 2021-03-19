@@ -13,7 +13,7 @@ private let logroot5 = log(root5)
 private let phi = (1.0 + root5)/2.0
 private let logphi = log(phi)
 
-func fBinet(_ n: Int) -> Decimal {
+func fBinet1(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     // pow(phi, n) == exp(log(phi)) * n

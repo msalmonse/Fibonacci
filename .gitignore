@@ -1,5 +1,9 @@
 .DS_store
 
+appinfo.swift
+
+test/
+
 ## User settings
 Fibonacci.xcodeproj/project.xcworkspace/
 Fibonacci.xcodeproj/xcuserdata/

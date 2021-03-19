@@ -40,7 +40,7 @@ func fRecursive2(_ n: Int) -> Decimal {
     }
 }
 
-func fRecursive10(_ n: Int) -> Decimal {
+func fRecursive1(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     switch n {
@@ -56,6 +56,6 @@ func fRecursive10(_ n: Int) -> Decimal {
     case 10: return 55
     default:
         // No need to calculate intermediate values
-        return 89 * fRecursive10(n - 10) + 55 * fRecursive10(n - 11)
+        return 89 * fRecursive1(n - 10) + 55 * fRecursive1(n - 11)
     }
 }

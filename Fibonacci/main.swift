@@ -31,6 +31,8 @@ print("\"n\"", terminator: "")
 _ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
 print()
 
+print("Created: ", ISO8601DateFormatter().string(from: Date()))
+
 for n in 1...nMax {
     print("\(n)", terminator: "")
     for imp in Implementation.allCases {

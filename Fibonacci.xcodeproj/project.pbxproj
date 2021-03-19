@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		C4028812259F7623005DB79F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4028811259F7623005DB79F /* Array.swift */; };
 		C402881525A0A0D9005DB79F /* TimeImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402881425A0A0D9005DB79F /* TimeImplementation.swift */; };
 		C408E93425CECF570011278E /* DecimalMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408E93325CECF570011278E /* DecimalMath.swift */; };
+		C4490A3A2604A42E00EB3414 /* appinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4490A392604A42E00EB3414 /* appinfo.swift */; };
 		C4EAA6A225D9239700196D5D /* Hybrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAA6A125D9239700196D5D /* Hybrid.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		C4028811259F7623005DB79F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		C402881425A0A0D9005DB79F /* TimeImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeImplementation.swift; sourceTree = "<group>"; };
 		C408E93325CECF570011278E /* DecimalMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalMath.swift; sourceTree = "<group>"; };
+		C4490A372604A2B100EB3414 /* autoversion.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = autoversion.sh; sourceTree = "<group>"; };
+		C4490A392604A42E00EB3414 /* appinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appinfo.swift; sourceTree = "<group>"; };
 		C4EAA6A125D9239700196D5D /* Hybrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hybrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +58,8 @@
 		C40287F0259E0EAA005DB79F = {
 			isa = PBXGroup;
 			children = (
+				C4490A392604A42E00EB3414 /* appinfo.swift */,
+				C4490A372604A2B100EB3414 /* autoversion.sh */,
 				C40287FB259E0EAA005DB79F /* Fibonacci */,
 				C40287FA259E0EAA005DB79F /* Products */,
 			);
@@ -90,10 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4028800259E0EAA005DB79F /* Build configuration list for PBXNativeTarget "Fibonacci" */;
 			buildPhases = (
+				C4490A382604A31E00EB3414 /* ShellScript */,
 				C40287F5259E0EAA005DB79F /* Sources */,
+				C47199BA25C583FF0064545E /* ShellScript */,
 				C40287F6259E0EAA005DB79F /* Frameworks */,
 				C40287F7259E0EAA005DB79F /* CopyFiles */,
-				C47199BA25C583FF0064545E /* ShellScript */,
+				C4490A3C2604C0E800EB3414 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -141,6 +148,41 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C4490A382604A31E00EB3414 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -x ${PROJECT_DIR}/autoversion.sh ]]\nthen\n    ${PROJECT_DIR}/autoversion.sh\nelse\n    echo autoversion.sh missing\nfi\n";
+		};
+		C4490A3C2604C0E800EB3414 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ln -sf \"$BUILT_PRODUCTS_DIR/csv2svg\" test\n";
+		};
 		C47199BA25C583FF0064545E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4490A3A2604A42E00EB3414 /* appinfo.swift in Sources */,
 				C408E93425CECF570011278E /* DecimalMath.swift in Sources */,
 				C4EAA6A225D9239700196D5D /* Hybrid.swift in Sources */,
 				C402880F259F73BA005DB79F /* Binet.swift in Sources */,
