@@ -181,7 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "ln -sf \"$BUILT_PRODUCTS_DIR/csv2svg\" test\n";
+			shellScript = "ln -sf \"$BUILT_PRODUCTS_DIR/Fibonacci\" test/fibonacci\n";
 		};
 		C47199BA25C583FF0064545E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

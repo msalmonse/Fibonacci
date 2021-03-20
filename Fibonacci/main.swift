@@ -31,7 +31,7 @@ print("\"n\"", terminator: "")
 _ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
 print()
 
-print("Created: ", ISO8601DateFormatter().string(from: Date()))
+print("Created: ", ISO8601DateFormatter().string(from: Date()), " Fibonacci: ", AppInfo.version)
 
 for n in 1...nMax {
     print("\(n)", terminator: "")
