@@ -18,7 +18,7 @@ func blockRunTime<T>(count: Int = 1, _ block: () -> T) -> Double {
 }
 
 enum Implementation: CaseIterable {
-    case array, binet1, binet2, iterative, recursive, recursive2, recursive1, hybrid
+    case array, binet1, binet2, iterative, recursive, recursive1, recursive2, hybrid
 
     func checkMax(_ n: Int) -> Bool {
         switch self {
