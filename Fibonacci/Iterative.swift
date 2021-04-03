@@ -7,13 +7,13 @@
 
 import Foundation
 
-func fIterative(_ n: Int) -> Int {
+func fIterative(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     if n == 1 { return 1 }
 
-    var fib1 = 1
-    var fib2 = 0
+    var fib1: Decimal = 1
+    var fib2: Decimal = 0
 
     for _ in 2...n {
         let t = fib1 + fib2

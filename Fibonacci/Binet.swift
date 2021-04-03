@@ -8,20 +8,21 @@
 import Foundation
 
 private let root5 = sqrt(5.0)
-private let log2root5 = log2(root5)
+private let invRoot5 = 1.0/root5
+private let logroot5 = log(root5)
 private let phi = (1.0 + root5)/2.0
-private let log2phi = log2(phi)
+private let logphi = log(phi)
 
-func fBinet(_ n: Int) -> Int {
+func fBinet1(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
-    // pow(phi, n) == exp2(log2(phi)) * n
-    return Int(round(exp2(log2phi * Double(n) - log2root5)))
+    // pow(phi, n) == exp(log(phi)) * n
+    return round(Decimal(exp(logphi * Double(n) - logroot5)))
 }
 
-func fBinet2(_ n: Int) -> Int {
+func fBinet2(_ n: Int) -> Decimal {
     guard n > 0 else { return 0 }
 
     // pow(phi, n) == exp2(log2(phi)) * n
-    return Int(round(pow(phi, Double(n))/root5))
+    return round(Decimal(pow(phi, Double(n)) * invRoot5))
 }
