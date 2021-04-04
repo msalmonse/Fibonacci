@@ -1,9 +1,9 @@
 {
-    "colours": [ "black", "violet" ],
-    "headerRows": 1,
+    "fontFamily": "Helvetica",
+    "headerRows": 2,
     "height": 600,
     "index": 1,
-    "strokeWidth": 3,
+    "subTitleHeader": 2,
     "title": "Fibonacci Implementation timings",
     "xTick": 25,
     "xTitle": "Fibonacci Number",
