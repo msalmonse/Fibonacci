@@ -27,7 +27,7 @@ enum Implementation: CaseIterable {
         case .binet2: return n < 70
         case .recursive: return n < 20
         case .recursive1: return n < 70
-        case .recursive2: return n < 190
+        case .recursive2: return n < 80
         default: return true
         }
     }
