@@ -31,7 +31,11 @@ print("\"n\"", terminator: "")
 _ = Implementation.allCases.map { print(",\"\($0.name())\"", terminator: "") }
 print()
 
-print("Created: ", ISO8601DateFormatter().string(from: Date()), " Fibonacci: ", AppInfo.version)
+print("Created: \(ISO8601DateFormatter().string(from: Date()))",
+      "Fibonacci: \(AppInfo.version)",
+      "Time in ns",
+      separator: ", "
+)
 
 for n in 1...nMax {
     print("\(n)", terminator: "")
@@ -41,10 +45,9 @@ for n in 1...nMax {
         if !imp.checkMax(n) {
             print(",", terminator: "")
         } else {
-            let runTime = String(format: "%.1f",
-                timeImplementation(n, count: runCount, imp: imp)/Double(runCount)
-            )
-            print(",\(runTime)", terminator: "")
+            let runOne = impRunTime(count: runCount, n: n, imp: imp)/Double(runCount)
+            let nsRun = String(format: "%.1f", runOne * 1.0e9)
+            print(",\(nsRun)", terminator: "")
         }
     }
     print()
