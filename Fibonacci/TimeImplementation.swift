@@ -7,14 +7,27 @@
 
 import Foundation
 
-func blockRunTime<T>(count: Int = 1, _ block: () -> T) -> Double {
-    let stt = clock_gettime_nsec_np(CLOCK_UPTIME_RAW)
-    for _ in 1...count {
-        _ = block()
-    }
-    let dur = Double(clock_gettime_nsec_np(CLOCK_UPTIME_RAW) - stt)
+// measure run time of count runs of block in seconds
+func impRunTime(count: Int = 1, n: Int, imp: Implementation) -> Double {
+    if #available(macOS 13.0, *) {
+        let clock = ContinuousClock()
+        let elapsed = clock.measure {
+            for _ in 1...count {
+                _ = runImplementation(n, imp: imp)
+            }
+        }
 
-    return dur
+        let (seconds, attoseconds) = elapsed.components
+        return Double(seconds) + Double(attoseconds)/1.0e18
+    } else {
+        let stt = clock_gettime_nsec_np(CLOCK_UPTIME_RAW)
+        for _ in 1...count {
+            _ = runImplementation(n, imp: imp)
+        }
+        let dur = Double(clock_gettime_nsec_np(CLOCK_UPTIME_RAW) - stt)
+
+        return dur * 1e-9
+    }
 }
 
 enum Implementation: CaseIterable {
@@ -69,18 +82,5 @@ func runImplementation(_ n: Int, imp: Implementation) -> Decimal {
     case .recursive: return fRecursive(n)
     case .recursive1: return fRecursive1(n)
     case .recursive2: return fRecursive2(n)
-    }
-}
-
-func timeImplementation(_ n: Int, count: Int, imp: Implementation) -> Double {
-    switch imp {
-    case .array: return blockRunTime(count: count) {fArray(n)}
-    case .binet1: return blockRunTime(count: count) {fBinet1(n)}
-    case .binet2: return blockRunTime(count: count) {fBinet2(n)}
-    case .hybrid: return blockRunTime(count: count) {fHybrid(n)}
-    case .iterative: return blockRunTime(count: count) {fIterative(n)}
-    case .recursive: return blockRunTime(count: count) {fRecursive(n)}
-    case .recursive1: return blockRunTime(count: count) {fRecursive1(n)}
-    case .recursive2: return blockRunTime(count: count) {fRecursive2(n)}
     }
 }
