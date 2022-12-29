@@ -1,4 +1,6 @@
 {
+    "backgroundColour": "linen",
+    "cssID": "Fibonacci",
     "fontFamily": "Helvetica",
     "headerRows": 2,
     "height": 600,
